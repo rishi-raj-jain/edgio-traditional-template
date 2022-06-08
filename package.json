@@ -1,20 +1,13 @@
 {
   "name": "layer0-traditional-poc-template",
   "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@babel/preset-env": "^7.14.5",
-    "@babel/preset-typescript": "^7.14.5",
-    "@layer0/cli": "^4.13.0",
-    "@layer0/core": "^4.13.0",
-    "@layer0/devtools": "^4.13.0",
-    "@layer0/prefetch": "^4.13.0",
-    "@layer0/starter": "^4.13.0",
-    "@types/jest": "^26.0.23",
+    "@layer0/cli": "latest",
+    "@layer0/core": "latest",
+    "@layer0/devtools": "latest",
+    "@layer0/prefetch": "latest",
+    "@layer0/starter": "latest",
     "@types/node": "^13.13.2",
-    "babel-jest": "^27.0.2",
-    "jest": "^27.0.5",
-    "nock": "^13.1.0",
-    "prettier": "^2.4.1",
+    "prettier": "latest",
     "typescript": "^4.4.4"
   },
   "scripts": {

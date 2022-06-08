@@ -13,14 +13,14 @@ new Prefetcher({
         maxMatches: 20,
         attribute: 'src',
         as: 'script',
-        callback: deepFetchJS,
+        callback: deepFetchAssets,
       },
       {
         selector: '[rel="stylesheet"]',
         maxMatches: 20,
         attribute: 'href',
         as: 'style',
-        callback: deepFetchCSS,
+        callback: deepFetchAssets,
       },
       {
         selector: '[rel="preload"]',

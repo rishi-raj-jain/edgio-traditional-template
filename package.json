@@ -13,8 +13,8 @@
   "scripts": {
     "start": "0 dev",
     "build": "0 build",
-    "prod": "0 run --production",
-    "deploy": "0 deploy -t=demos",
+    "prod": "0 run -p",
+    "deploy": "0 deploy",
     "format": "prettier --write '*/*' --ignore-unknown"
   },
   "dependencies": {}

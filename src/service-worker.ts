@@ -31,10 +31,9 @@ new Prefetcher({
       },
     ]),
   ],
-})
-  .route()
-  // .cache(/^https:\/\/(.*?)\.com\/.*/)
-  // .cache(/^https:\/\/(.*?)\.net\/.*/)
+}).route()
+// .cache(/^https:\/\/(.*?)\.com\/.*/)
+// .cache(/^https:\/\/(.*?)\.net\/.*/)
 
 function deepFetchAssets({ $el, el, $ }: DeepFetchCallbackParam) {
   let urlTemplate = $(el).attr('href')

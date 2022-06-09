@@ -29,12 +29,13 @@ export default function transformResponse(response: Response, request: Request) 
     /////////////////////////////////////////////////////////
 
     // Home
-    if (request.path == '/') {}
+    if (request.path == '/') {
+    }
 
     response.body = $.html()
       .replace(/\?layer0\_dt\_pf\=1/g, '')
       .replace(/\=\"\/\//g, '="https://')
-      // .replace(/https?:\/\/www\.nike\.com\//g, '/')
-      // .replace(/https?:\/\/images\.footballfanatics\.com\//g, '/l0-image/')
+    // .replace(/https?:\/\/www\.nike\.com\//g, '/')
+    // .replace(/https?:\/\/images\.footballfanatics\.com\//g, '/l0-image/')
   }
 }

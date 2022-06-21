@@ -10,24 +10,9 @@ export default function transformResponse(response: Response, request: Request) 
     // For production these scripts should be included in original website base code.
     $('head').append(`
       <script src="/__layer0__/cache-manifest.js" defer="defer"></script>
-      <script src="/l0_main.js" defer="defer"></script>
+      <script src="/__layer0__/main.js" defer="defer"></script>
     `)
-
-    /////////////////////////////////////////////////////////
-    // Late-loading non-vital CSS and preloading vital CSS //
-    // const optimizeCssLoading = (nonVitalCss: string[], vitalCss: string[]) => {
-    //   vitalCss.forEach(css => {
-    //     const tempCss = $(`link[href*=${css}]`).attr('href') || '';
-    //     preloadCss(tempCss);
-    //   });
-    //   nonVitalCss.forEach(css => {
-    //     const tempCss = $(`link[href*=${css}]`).attr('href');
-    //     $(`[href*=${tempCss}]`).remove();
-    //     $('head').append(`<link rel="stylesheet" media="print" onload="this.media='all'" href="${tempCss}">`)
-    //   });
-    // }
-    /////////////////////////////////////////////////////////
-
+    
     // Home
     if (request.path == '/') {
     }

@@ -8,7 +8,7 @@ export default new Router()
   .match('/service-worker.js', ({ serviceWorker }) => {
     serviceWorker('dist/service-worker.js')
   })
-  .match('/l0_main.js', ({ serveStatic, cache }) => {
+  .match('/__layer0__/main.js', ({ serveStatic, cache }) => {
     cache(CACHE_ASSETS)
     serveStatic('dist/browser.js')
   })

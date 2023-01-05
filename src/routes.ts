@@ -1,14 +1,13 @@
 import { CACHE_ASSETS } from './cache'
-import { Router } from '@layer0/core/router'
+import { Router } from '@edgio/core/router'
 import shoppingFlowRouteHandler from './shoppingFlowRouteHandler'
 
 export default new Router()
-
-  // Layer0 Service Worker Files
+  // Edgio Service Worker Files
   .match('/service-worker.js', ({ serviceWorker }) => {
     serviceWorker('dist/service-worker.js')
   })
-  .match('/__layer0__/main.js', ({ serveStatic, cache }) => {
+  .match('/__edgio__/main.js', ({ serveStatic, cache }) => {
     cache(CACHE_ASSETS)
     serveStatic('dist/browser.js')
   })

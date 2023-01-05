@@ -1,5 +1,5 @@
-/.layer0
-/node_modules
-/dist
-/.yalc
+node_modules
+dist
+.yalc
 yalc.lock
+.edgio

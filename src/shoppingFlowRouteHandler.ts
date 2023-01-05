@@ -1,13 +1,13 @@
 import { CACHE_PAGES } from './cache'
 // import transformResponse from './transform'
-import { RouteHandler } from '@layer0/core/router/Router'
+import { RouteHandler } from '@edgio/core/router/Router'
 
 const handler: RouteHandler = async ({ cache, removeUpstreamResponseHeader, setResponseHeader, updateResponseHeader, proxy }) => {
   cache(CACHE_PAGES)
 
   // Remove set-cookie header to make pages cacheable,
   // feel free to uncomment in case this is what is preventing
-  // pages from being cached on Layer0
+  // pages from being cached on Edgio
 
   // removeUpstreamResponseHeader('set-cookie')
 
@@ -15,12 +15,12 @@ const handler: RouteHandler = async ({ cache, removeUpstreamResponseHeader, setR
   // OR
   // Update the cache-control header to make pages cacheable,
   // feel free to uncomment in case this is what is preventing
-  // pages from being cached on Layer0
+  // pages from being cached on Edgio
 
   // removeUpstreamResponseHeader('cache-control')
   // setResponseHeader('cache-control', 'public, max-age=86400')
 
-  // Updating origin headers to point on Layer0 for user error/redirects
+  // Updating origin headers to point on Edgio for user error/redirects
   updateResponseHeader('location', /https:\/\/nike\.com\//gi, '/')
   updateResponseHeader('location', /https:\/\/www\.nike\.com\//gi, '/')
 
